@@ -27,8 +27,28 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>4.0.0</version>
 				<extensions>true</extensions>
+				<configuration>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>${app.runtime}</muleVersion>
+						<!-- <username>zerotosiva4</username>
+						<password>Learnmule$1</password> -->
+						<connectedAppClientId>e049426507d54850a32575110af81fd3</connectedAppClientId>
+						<connectedAppClientSecret>07A2d65dDADa4A0CB4B3c7110ae6F887</connectedAppClientSecret>
+						<connectedAppGrantType>client_credentials</connectedAppGrantType>
+						<applicationName>myapp-deloitte</applicationName>
+						<environment>Sandbox</environment>
+						<region>us-east-1</region>
+						<workers>1</workers>
+						<workerType>MICRO</workerType>
+						<properties>
+							<k1>v1</k1>
+							<k2>v2</k2>
+						</properties>
+					</cloudHubDeployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
