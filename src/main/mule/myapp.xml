@@ -11,5 +11,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="myappFlow" doc:id="19b4ef1e-d1a3-4083-8963-3bd51544868d" >
 		<http:listener doc:name="Listener" doc:id="f3ecb1cd-1c9c-4be2-aa93-9b793e286277" config-ref="HTTP_Listener_config" path="/hello"/>
 		<set-payload value="#['hello ' ++ attributes.queryParams.username]" doc:name="Set Payload" doc:id="0b1cada6-91e5-4c35-96a0-62bf1a43fd03" />
+		<logger level="INFO" doc:name="Logger" doc:id="f7b5a9a1-b28b-4b0e-927b-10fe968c8968" />
 	</flow>
 </mule>
